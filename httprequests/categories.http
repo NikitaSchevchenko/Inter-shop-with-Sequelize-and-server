@@ -1,0 +1,29 @@
+@baseUrl = http://localhost:5000/api/categories
+
+###
+GET {{baseUrl}}
+
+###
+GET {{baseUrl}}/after
+
+###
+GET {{baseUrl}}/after?minId=2
+
+###
+GET {{baseUrl}}/by-titles?titles=Електроніка,Сантехніка
+
+###
+PATCH {{baseUrl}}/1
+Content-Type: application/json
+
+{
+    "description": "Смартфони, гаджети та аксесуари"
+}
+
+###
+DELETE {{baseUrl}}
+Content-Type: application/json
+
+{
+    "ids": [5]
+}

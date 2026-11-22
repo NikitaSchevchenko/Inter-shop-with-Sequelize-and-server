@@ -1,0 +1,37 @@
+@baseUrl = http://localhost:5000/api/customers
+
+###
+GET {{baseUrl}}
+
+###
+GET {{baseUrl}}/after
+
+###
+GET {{baseUrl}}/after?minId=2
+
+###
+GET {{baseUrl}}/by-emails?emails=ivan@gmail.com,olena@gmail.com
+
+###
+PATCH {{baseUrl}}/1
+Content-Type: application/json
+
+{
+    "name": "Іван Петренко-Оновлений"
+}
+
+
+###
+GET {{baseUrl}}/top-buyer
+
+###
+GET {{baseUrl}}/most-expensive-buyer
+
+###
+DELETE {{baseUrl}}
+Content-Type: application/json
+
+{
+    "ids": [6]
+}
+

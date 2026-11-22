@@ -1,0 +1,30 @@
+@baseUrl = http://localhost:5000/api/items
+
+###
+GET {{baseUrl}}
+
+###
+GET {{baseUrl}}/after
+
+###
+GET {{baseUrl}}/after?minId=4
+
+###
+GET {{baseUrl}}/by-brands?brands=Apple,Samsung,Lenovo
+
+###
+PATCH {{baseUrl}}/1
+Content-Type: application/json
+
+{
+    "price": 47999.99,
+    "amount": 18
+}
+
+###
+DELETE {{baseUrl}}
+Content-Type: application/json
+
+{
+    "ids": [7]
+}

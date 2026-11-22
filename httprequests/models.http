@@ -1,0 +1,29 @@
+@baseUrl = http://localhost:5000/api/models
+
+###
+GET {{baseUrl}}
+
+###
+GET {{baseUrl}}/after
+
+###
+GET {{baseUrl}}/after?minId=5
+
+###
+GET {{baseUrl}}/by-brands?brands=Apple,Samsung,Lenovo
+
+###
+PATCH {{baseUrl}}/1
+Content-Type: application/json
+
+{
+    "description": "Оновлений флагманський смартфон Apple"
+}
+
+###
+DELETE {{baseUrl}}
+Content-Type: application/json
+
+{
+    "ids": [8]
+}

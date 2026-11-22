@@ -1,0 +1,30 @@
+@baseUrl = http://localhost:5000/api/orders
+
+###
+GET {{baseUrl}}
+
+###
+GET {{baseUrl}}/after
+
+###
+GET {{baseUrl}}/after?minId=4
+
+###
+GET {{baseUrl}}/by-customers?emails=ivan@gmail.com,olena@gmail.com
+
+###
+PATCH {{baseUrl}}/1
+Content-Type: application/json
+
+{
+    "paid": false,
+    "amount": 105000
+}
+
+###
+DELETE {{baseUrl}}
+Content-Type: application/json
+
+{
+    "ids": [7]
+}

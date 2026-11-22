@@ -1,0 +1,29 @@
+@baseUrl = http://localhost:5000/api/item-orders
+
+###
+GET {{baseUrl}}
+
+###
+GET {{baseUrl}}/after
+
+###
+GET {{baseUrl}}/after?minId=3
+
+###
+GET {{baseUrl}}/by-orders?orderIds=1,2,3
+
+###
+PATCH {{baseUrl}}/1
+Content-Type: application/json
+
+{
+    "item_id": 2
+}
+
+###
+DELETE {{baseUrl}}
+Content-Type: application/json
+
+{
+    "ids": [6]
+}

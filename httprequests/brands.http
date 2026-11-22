@@ -1,0 +1,29 @@
+@baseUrl = http://localhost:5000/api/brands
+
+###
+GET {{baseUrl}}
+
+###
+GET {{baseUrl}}/after
+
+###
+GET {{baseUrl}}/after?minId=4
+
+###
+GET {{baseUrl}}/by-titles?titles=Apple,Samsung,Sony
+
+###
+PATCH {{baseUrl}}/1
+Content-Type: application/json
+
+{
+    "description": "Світовий виробник електроніки"
+}
+
+###
+DELETE {{baseUrl}}
+Content-Type: application/json
+
+{
+    "ids": [6]
+}

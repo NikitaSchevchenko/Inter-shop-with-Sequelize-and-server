@@ -1,0 +1,29 @@
+@baseUrl = http://localhost:5000/api/stores
+
+###
+GET {{baseUrl}}
+
+###
+GET {{baseUrl}}/after
+
+###
+GET {{baseUrl}}/after?minId=5
+
+###
+GET {{baseUrl}}/by-titles?titles=Київ,Львів,Харків
+
+###
+PATCH {{baseUrl}}/1
+Content-Type: application/json
+
+{
+    "description": "Головний центральний склад"
+}
+
+###
+DELETE {{baseUrl}}
+Content-Type: application/json
+
+{
+    "ids": [6]
+}

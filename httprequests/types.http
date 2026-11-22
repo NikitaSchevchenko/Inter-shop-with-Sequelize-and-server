@@ -1,0 +1,29 @@
+@baseUrl = http://localhost:5000/api/types
+
+###
+GET {{baseUrl}}
+
+###
+GET {{baseUrl}}/after
+
+###
+GET {{baseUrl}}/after?minId=3
+
+###
+GET {{baseUrl}}/by-titles?titles=Смартфон,Ноутбук
+
+###
+PATCH {{baseUrl}}/1
+Content-Type: application/json
+
+{
+    "description": "Сучасний мобільний телефон"
+}
+
+###
+DELETE {{baseUrl}}
+Content-Type: application/json
+
+{
+    "ids": [3]
+}
